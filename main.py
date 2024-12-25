@@ -39,5 +39,5 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 data = {"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()}, "color":get_random_color()}
-res = (user_id,  data)
+res = wm.send_template(user_id,  data)
 print(res)
