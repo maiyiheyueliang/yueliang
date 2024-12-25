@@ -37,7 +37,6 @@ def get_birthday():
 client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
-wea, temperature = get_weather()
 data = {"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()}}
 res = wm.send_template(user_id, template_id, data)
 print(res)
