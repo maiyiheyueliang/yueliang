@@ -22,8 +22,8 @@ def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
   res = requests.get(url).json()
   #weather = res['data']['list'][0]
-  weather = res['list'][0]
-  return weather['weather'], math.floor(weather['temp'])
+  #return weather['weather'], math.floor(weather['temp'])
+  return math.floor(weather['temp'])
 
 
 def get_count():
@@ -41,7 +41,6 @@ def get_words():
   if words.status_code != 200:
     return get_words()
   #return words.json()['data']['text']
-  return words.json()['text']
 
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
