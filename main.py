@@ -38,6 +38,6 @@ def get_random_color():
 client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
-data = {"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()}, "color":get_random_color()}}
+data = {"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()}, "color":get_random_color()}
 res = wm.send(user_id,  data)
 print(res)
